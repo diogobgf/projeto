@@ -121,6 +121,7 @@ while (cont_Mp === 0){
 
     } else if (opcao_MenuP === 2){
         mConsulta();
+        
         break
     } else if (opcao_MenuP === 3){
         console.log("Vendas");
@@ -128,10 +129,13 @@ while (cont_Mp === 0){
     } else if (opcao_MenuP === 4){
         console.log("Sistema Finalizado");
         break
-    } else if (opcao_MenuP > 0 || opcao_MenuP > 4){
+    } else{
+        console.log("Opção Inválida");
+    } 
+    /* else if (opcao_MenuP > 0 || opcao_MenuP > 4){
         console.log("Opção Inválida");
         cont_Mp = 0;
-    }
+    } */
 }
 
 
