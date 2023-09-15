@@ -21,6 +21,7 @@ function mConsulta (texto){
       console.log("==================================");
       console.log("===== 1 – Cosulta Todos ==========");
       console.log("===== 2 – Consulta Especifica ====");
+      console.log("===== 3 – Voltar Menu Consulta ===");
       console.log("==================================");
     
       return texto;
@@ -34,6 +35,7 @@ function mConsulta (texto){
         console.log("==================================");
         console.log("===== 1 – Cosulta Todos ==========");
         console.log("===== 2 – Consulta Especifica ====");
+        console.log("===== 3 – Voltar Menu Consulta ===");
         console.log("==================================");
       
         return texto;
@@ -47,6 +49,7 @@ function mConsulta (texto){
         console.log("==================================");
         console.log("===== 1 – Cosulta Todos ==========");
         console.log("===== 2 – Consulta Especifica ====");
+        console.log("===== 3 – Voltar Menu Consulta ===");
         console.log("==================================");
       
         return texto;
@@ -189,7 +192,7 @@ function mConsulta (texto){
             console.log("==================================");
             console.log("");
 
-            let cod_vend = parseInt(readline.question("Digite o codigo do Vendedor: "));
+            let cod_vend = parseInt(readline.question("Digite o Matrícula do Vendedor: "));
             cod_vend = cod_vend - 1;
             console.log("");
             console.log(vendedores[cod_vend]);
@@ -206,19 +209,23 @@ function mConsulta (texto){
                 console.log("==================================");
                 console.log("");
 
-                let cod_vend = parseInt(readline.question("Digite o codigo do Vendedor: "));
+                let cod_vend = parseInt(readline.question("Digite o Matrícula do Vendedor: "));
                 cod_vend = cod_vend - 1;
                 console.log("");
                 console.log(vendedores[cod_vend]); 
                 console.log("");
-                cont_Mcv2 = 0;
-                
-              } else{
+                           
+              } else {
                 console.log("");
                 consVendedor();
                 console.log("");
-              }
-            }      
+                break
+              } 
+            }       
+          } else {
+            console.log("");
+            mConsulta ();
+            break   
           }          
         }      
       } else if(opcao_mCons === 2){
@@ -252,7 +259,7 @@ function mConsulta (texto){
             console.log("==================================");
             console.log("");
 
-            let cod_cliente = parseInt(readline.question("Digite o codigo do Vendedor: "));
+            let cod_cliente = parseInt(readline.question("Digite o Matrícula do Cliente: "));
             cod_cliente = cod_cliente - 1;
             console.log("");
             console.log(clientes[cod_cliente]);
@@ -269,20 +276,23 @@ function mConsulta (texto){
                 console.log("==================================");
                 console.log("");
 
-                let cod_cliente = parseInt(readline.question("Digite o codigo do Vendedor: "));
+                let cod_cliente = parseInt(readline.question("Digite o Matrícula do Cliente: "));
                 cod_cliente = cod_cliente - 1;
                 console.log("");
                 console.log(clientes[cod_cliente]);
                 console.log("");
-                cont_Mcc2 = 0;
                 
               } else{
                 console.log("");
                 consCliete();
                 console.log("");
-                cont_Mcc2 = 1;
+                break
               }
             }
+          } else {
+            console.log("");
+            mConsulta ();
+            break 
           }
         }
       } else if(opcao_mCons === 3){
@@ -315,7 +325,7 @@ function mConsulta (texto){
             console.log("==================================");
             console.log("");
 
-            let cod_carro = parseInt(readline.question("Digite o codigo do Carro: "));
+            let cod_carro = parseInt(readline.question("Digite o código do Carro: "));
             cod_carro = cod_carro - 1;
             console.log("");
             console.log(carros[cod_carro]);
@@ -333,17 +343,16 @@ function mConsulta (texto){
                 console.log("==================================");
                 console.log("");
 
-                let cod_carro = parseInt(readline.question("Digite o codigo do Carro: "));
+                let cod_carro = parseInt(readline.question("Digite o cádigo do Carro: "));
                 cod_carro = cod_carro - 1;
                 console.log("");
                 console.log(carros[cod_carro]);
                 console.log("");
-                cont_Mccar2 = 0;
 
               } else{
                 console.log("");
                 consCarro();
-                cont_Mccar2 = 1;
+                break
               }
             }
           }
@@ -358,8 +367,7 @@ function mConsulta (texto){
         console.log("");
         console.log("Sistema Finalizado");
         console.log("");
-
-        break
+        break;
           
       } else {
         console.log("");
