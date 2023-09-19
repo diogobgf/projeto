@@ -21,15 +21,20 @@ const carro3 = { codigoCarro: 3, marca: "Ford", modelo: "Ranger", cor: "Vermelho
 const carro4 = { codigoCarro: 4, marca: "Honda", modelo: "Civic", cor: "Verde", ano: "2020", preco: 105000 };
 const carro5 = { codigoCarro: 5, marca: "Renault", modelo: "kwid", cor: "Azul", ano: "2019", preco: 46000 };
 
+// instâcia de vendas
+const venda1 = {codVenda: 1, codVendedor: 1, nomeVendedor: "Adriano", codCliente: 2, nomeCliente: "Sérgio", codCarros: 3, marcaCarro: "Ford", modeloCarro: "Ranger"};
+
+
 // listas
 const vendedores = [vendedor1, vendedor2, vendedor3];
 const clientes = [cliente1, cliente2, cliente3, cliente4, cliente5];
 const carros = [carro1, carro2, carro3, carro4, carro5];
+const vendas = [venda1];
 
 // geradores de código automático
 let geradorMatriculaVendedor = 3;
 let geradorCodigoCliente = 5;
-let gereadorCodigoVenda = 0;
+let gereadorCodigoVenda = 1;
 let geradorCodigoCarro = 5;
 
 // variáveis de controle
@@ -56,23 +61,6 @@ function menuCadastros() {
     console.log("==== Concessionária de Carros Seminovos ====");
     console.log();
     console.log("============| Menu1 CADASTROS | ============");
-    console.log();
-    console.log("============== 1 – VENDEDOR ================");
-    console.log("============== 2 – CLIENTE =================");
-    console.log("============== 3 – CARROS ==================");
-    console.log("============== 4 – ALTERAR =================");
-    console.log("============== 5 – REMOVER =================");
-    console.log("============== 9 – VOLTAR ==================");
-    console.log("============== 0 – Sair ====================");
-    console.log("============================================");
-    console.log();
-}
-
-function menuConsultas() {
-    console.log();
-    console.log("==== Concessionária de Carros Seminovos ====");
-    console.log();
-    console.log("============| Menu2 CONSULTAS | ============");
     console.log();
     console.log("============== 1 – VENDEDOR ================");
     console.log("============== 2 – CLIENTE =================");
@@ -281,6 +269,7 @@ function excluirCadastroVendedor() {
     console.log();
     for (let i = 0; i < vendedores.length; i++) {
         if (vendedores[i].matricula == matriculaBusca) {
+            vendedores.splice(matriculaBusca, 1);
             console.log(`O seguinte cadastro será excluído:\n\nID: ${vendedores[i].matricula} | Nome: ${vendedores[i].nome} | CPF: ${vendedores[i].cpf}`);
         }
     }
@@ -617,7 +606,42 @@ while (loop) {
     
     }       
     } else if (opcao == 3) {
-        console.log('VENDAS');
+
+        function cadastrarVendas() {
+            console.log("CADASTRO DE VENDAS  | ========================");
+            console.log();
+            let cod_vendedor = readline.question("Digite o Código do Vendedor: ");
+            let cod_cliente = readline.questionInt("Digite o Código do Cliente: ");
+            let cod_carro = readline.questionInt("Digite o Código do Carro: ");
+            geradorCodigoCliente++;
+            let temp = vendedores[cod_vendedor];
+            let temp1 = clientes[cod_cliente];
+            let temp2 = carros[cod_carro];
+            const venda = {
+                codVenda: gereadorCodigoVenda,
+                codVendedor: cod_vendedor,
+                codCliente: cod_cliente,
+                codcarros: cod_carro,
+                nomeVendedor: temp.nome,
+                nomeCliente: temp1.nome,
+                marcaCarro: temp2.marca,
+                modeloCarro: temp2.modelo
+            };
+            vendas.push(venda);
+            console.log();
+            console.log("Venda cadastrada com sucesso!");
+            opcao = 1;
+            return opcao = 1;
+        }
+
+        cadastrarVendas();
+        console.log("");
+        console.log("");
+        console.log(vendas[gereadorCodigoVenda]);
+        break
+        
+
+
     } else {
         console.log('Opção inválida. Tente novamente!');
     }
