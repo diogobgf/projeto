@@ -76,10 +76,10 @@ function menuCadastros() {
 function mConsulta (texto){
     console.log("==================================");
     console.log("======== Menu 2 – Consulta =======");
-    console.log("========== 1 – VENDEDOR ==========");
-    console.log("========== 2 – CLIENTE  ==========");
-    console.log("========== 3 – CARROS ============");
-    console.log("========== 4 – VOLTAR ============");
+    console.log("==== 1 – VENDEDOR ================");
+    console.log("==== 2 – CLIENTE  ================");
+    console.log("==== 3 – CARROS ==================");
+    console.log("==== 4 – VOLTAR MENU PRINCIPAL ===");
     console.log("==================================");
     
     return texto;
@@ -408,7 +408,7 @@ while (loop) {
             console.log(vendedores);
             console.log("");
             
-            let cons_voltar = parseInt(readline.question("Digite 1 para volta ao Menu Consultas: "));
+            let cons_voltar = parseInt(readline.question("Pressione Enter para volta ao menu consulta... "));
             console.log("");
             mConsulta ();
             cont_Mcv = 1;
@@ -443,12 +443,16 @@ while (loop) {
                 console.log(vendedores[cod_vend]); 
                 console.log("");
                            
-              } else {
+              } else if (cons_Voltar2 === 2){
                 console.log("");
                 consVendedor();
                 console.log("");
                 break
-              } 
+              } else {
+                console.log("");
+                console.log("Opção Ivalida");
+                console.log("");
+              }
             }       
           } else {
             console.log("");
@@ -474,7 +478,7 @@ while (loop) {
             console.log(clientes);
             console.log("");
 
-            let cons_voltar1 = parseInt(readline.question("Digite 1 para volta ao Menu Consultas: "));
+            let cons_voltar1 = parseInt(readline.question("Pressione Enter para volta ao menu consulta... "));
             console.log("");
             mConsulta ();
             console.log("");
@@ -510,11 +514,15 @@ while (loop) {
                 console.log(clientes[cod_cliente]);
                 console.log("");
                 
-              } else{
+              } else if (cons_Voltar3 === 2){
                 console.log("");
                 consCliete();
                 console.log("");
                 break
+              }else {
+                console.log("");
+                console.log("Opção Ivalida");
+                console.log("");
               }
             }
           } else {
@@ -541,7 +549,7 @@ while (loop) {
             console.log(carros);
             console.log("");
 
-            let cons_voltar4 = parseInt(readline.question("Digite 1 para volta ao Menu Consultas: "));
+            let cons_voltar4 = parseInt(readline.question("Pressione Enter para volta ao menu consulta... "));
             console.log("");
             mConsulta ();
             cont_Mccar = 1;
@@ -577,11 +585,15 @@ while (loop) {
                 console.log(carros[cod_carro]);
                 console.log("");
 
-              } else{
+              } else if (cons_Voltar5 === 2){
                 console.log("");
                 consCarro();
                 console.log("");
                 break
+              }else {
+                console.log("");
+                console.log("Opção Ivalida");
+                console.log("");
               }
             }
           } else{
