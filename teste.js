@@ -91,7 +91,7 @@ function consVendedor (texto){
     console.log("===== Consulta de Vendedores =====");
     console.log("==================================");
     console.log("==================================");
-    console.log("===== 1 – Cosulta Todos ==========");
+    console.log("===== 1 – Consulta Todos ==========");
     console.log("===== 2 – Consulta Especifica ====");
     console.log("===== 3 – Voltar Menu Consulta ===");
     console.log("==================================");
@@ -105,7 +105,7 @@ function consCliete (texto){
     console.log("====== Consulta de Clientes ======");
     console.log("==================================");
     console.log("==================================");
-    console.log("===== 1 – Cosulta Todos ==========");
+    console.log("===== 1 – Consulta Todos ==========");
     console.log("===== 2 – Consulta Especifica ====");
     console.log("===== 3 – Voltar Menu Consulta ===");
     console.log("==================================");
@@ -119,7 +119,7 @@ function consCarro (texto){
     console.log("======= Consulta de Carros =======");
     console.log("==================================");
     console.log("==================================");
-    console.log("===== 1 – Cosulta Todos ==========");
+    console.log("===== 1 – Consulta Todos ==========");
     console.log("===== 2 – Consulta Especifica ====");
     console.log("===== 3 – Voltar Menu Consulta ===");
     console.log("==================================");
@@ -402,7 +402,7 @@ while (loop) {
           if (opcao_Mcv === 1){
             console.log("");
             console.log("==================================");
-            console.log("========= Cosulta Todos ==========");
+            console.log("========= Consulta Todos ==========");
             console.log("==================================");
             console.log("");
             console.log(vendedores);
@@ -416,7 +416,7 @@ while (loop) {
           } else if(opcao_Mcv === 2){
             console.log("");
             console.log("==================================");
-            console.log("======= Cosulta Específica =======");
+            console.log("======= Consulta Específica =======");
             console.log("==================================");
             console.log("");
 
@@ -433,11 +433,11 @@ while (loop) {
               if (cons_Voltar2 === 1){
                 console.log("");
                 console.log("==================================");
-                console.log("======= Cosulta Específica =======");
+                console.log("======= Consulta Específica =======");
                 console.log("==================================");
                 console.log("");
 
-                let cod_vend = parseInt(readline.question("Digite o Matrícula do Vendedor: "));
+                let cod_vend = parseInt(readline.question("Digite a Matrícula do Vendedor: "));
                 cod_vend = cod_vend - 1;
                 console.log("");
                 console.log(vendedores[cod_vend]); 
@@ -450,7 +450,7 @@ while (loop) {
                 break
               } else {
                 console.log("");
-                console.log("Opção Ivalida");
+                console.log("Opção Inválida");
                 console.log("");
               }
             }       
@@ -472,7 +472,7 @@ while (loop) {
           if (opcao_Mcc === 1){
             console.log("");
             console.log("==================================");
-            console.log("========= Cosulta Todos ==========");
+            console.log("========= Consulta Todos ==========");
             console.log("==================================");
             console.log("");
             console.log(clientes);
@@ -487,11 +487,11 @@ while (loop) {
           } else if(opcao_Mcc === 2){
             console.log("");
             console.log("==================================");
-            console.log("======= Cosulta Específica =======");
+            console.log("======= Consulta Específica =======");
             console.log("==================================");
             console.log("");
 
-            let cod_cliente = parseInt(readline.question("Digite o Matrícula do Cliente: "));
+            let cod_cliente = parseInt(readline.question("Digite a Matrícula do Cliente: "));
             cod_cliente = cod_cliente - 1;
             console.log("");
             console.log(clientes[cod_cliente]);
@@ -504,11 +504,11 @@ while (loop) {
               if (cons_Voltar3 === 1){
                 console.log("");
                 console.log("==================================");
-                console.log("======= Cosulta Específica =======");
+                console.log("======= Consulta Específica =======");
                 console.log("==================================");
                 console.log("");
 
-                let cod_cliente = parseInt(readline.question("Digite o Matrícula do Cliente: "));
+                let cod_cliente = parseInt(readline.question("Digite a Matrícula do Cliente: "));
                 cod_cliente = cod_cliente - 1;
                 console.log("");
                 console.log(clientes[cod_cliente]);
@@ -521,7 +521,7 @@ while (loop) {
                 break
               }else {
                 console.log("");
-                console.log("Opção Ivalida");
+                console.log("Opção Inválida");
                 console.log("");
               }
             }
@@ -543,7 +543,7 @@ while (loop) {
           if (opcao_Mccar === 1){
             console.log("");
             console.log("==================================");
-            console.log("========= Cosulta Todos ==========");
+            console.log("========= Consulta Todos ==========");
             console.log("==================================");
             console.log("");
             console.log(carros);
@@ -557,7 +557,7 @@ while (loop) {
           }else if(opcao_Mccar === 2){
             console.log("");
             console.log("==================================");
-            console.log("======= Cosulta Específica =======");
+            console.log("======= Consulta Específica =======");
             console.log("==================================");
             console.log("");
 
@@ -575,7 +575,7 @@ while (loop) {
               if (cons_Voltar5 === 1){
                 console.log("");
                 console.log("==================================");
-                console.log("======= Cosulta Específica =======");
+                console.log("======= Consulta Específica =======");
                 console.log("==================================");
                 console.log("");
 
@@ -592,7 +592,7 @@ while (loop) {
                 break
               }else {
                 console.log("");
-                console.log("Opção Ivalida");
+                console.log("Opção Inválida");
                 console.log("");
               }
             }
