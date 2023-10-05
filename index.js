@@ -1,5 +1,6 @@
 // CONCESSIONÁRIO DE CARROS SEMINOVOS
 // GRUPO: Diogo Belo | Adriano | Lucas 
+// Professor Waldeck
 
 const readline = require("readline-sync");
 
