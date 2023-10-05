@@ -1,3 +1,6 @@
+// CONCESSIONÁRIO DE CARROS SEMINOVOS
+// GRUPO: Diogo Belo | Adriano | Lucas 
+
 const readline = require("readline-sync");
 
 let geradorMatriculaVendedor = 3;
